@@ -34,6 +34,12 @@
           "fix": "safe",
           "options": {}
         }
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "error",
+          "fix": "safe"
+        }
       }
     },
     "domains": {

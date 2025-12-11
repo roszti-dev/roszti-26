@@ -2,20 +2,19 @@ import { LogOut } from "lucide-react";
 import Link from "next/link";
 import { links } from "@/lib/links";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "../theme-toggle/theme-toggle";
 import { Button, buttonVariants } from "../ui/button";
 
 export default function Sidebar() {
   return (
-    <nav className="fixed hidden bg-background md:flex flex-col left-0 inset-y-0 w-72 border-r">
-      <div className="h-16 flex items-center px-4 border-b justify-between">
-        <Link href="/" className="text-2xl font-bold">
+    <nav className="fixed inset-y-0 left-0 hidden w-72 flex-col border-r bg-background md:flex">
+      <div className="flex h-16 items-center justify-between border-b px-4">
+        <Link href="/" className="font-bold text-2xl">
           RÖsz<span className="text-primary">TI</span>
         </Link>
-        <div className="size-8 text-sm font-semibold rounded-full text-primary-foreground flex items-center justify-center bg-primary aspect-square">
-          VB
-        </div>
+        <ThemeToggle />
       </div>
-      <div className="py-4 px-2 flex flex-col gap-y-1">
+      <div className="flex flex-col gap-y-1 px-2 py-4">
         {links.map((link) => (
           <Link
             key={link.label}

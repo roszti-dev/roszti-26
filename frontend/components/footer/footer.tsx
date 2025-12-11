@@ -3,14 +3,14 @@ import { links } from "@/lib/links";
 
 export default function Footer() {
   return (
-    <div className="fixed bg-background bottom-0 h-16 w-full md:hidden border-t grid grid-cols-3 px-2">
+    <div className="fixed bottom-0 grid h-16 w-full grid-cols-3 border-t bg-background px-2 md:hidden">
       {links
         .filter((link) => link.onFooter)
         .map((link) => (
           <Link
             key={link.label}
             href={link.href}
-            className="text-xs flex flex-col items-center justify-center gap-y-1 text-muted-foreground"
+            className="flex flex-col items-center justify-center gap-y-1 text-muted-foreground text-xs"
           >
             <link.icon className="text-primary" />
             {link.label}
@@ -18,9 +18,9 @@ export default function Footer() {
         ))}
       <Link
         href="/profile"
-        className="text-xs flex flex-col items-center justify-center gap-y-1 text-muted-foreground"
+        className="flex flex-col items-center justify-center gap-y-1 text-muted-foreground text-xs"
       >
-        <div className="size-6 shrink-0 text-xs font-semibold rounded-full text-primary-foreground flex items-center justify-center bg-primary aspect-square">
+        <div className="flex aspect-square size-6 shrink-0 items-center justify-center rounded-full bg-primary font-semibold text-primary-foreground text-xs">
           VB
         </div>
         Profile
