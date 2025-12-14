@@ -20,7 +20,7 @@ async function verifyPassword(
   password: string,
   hashedPassword: string
 ): Promise<boolean> {
-  return await Bun.password.verify(hashedPassword, password);
+  return await Bun.password.verify(password, hashedPassword);
 }
 
 async function getToken(id: string, email: string, name: string) {
